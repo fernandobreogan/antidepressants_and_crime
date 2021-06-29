@@ -1,56 +1,27 @@
-<p align="center">
-  <img width="1000" height="300" src="https://github.com/breogann/Project-2.Antidepressant-prescription/Images/cover.png" alt="Datas nurturing & cleaning">
-</p>
+# Pipeline
+
+Get playlist from Spotify API -> Processing -> Scrape lyriocs through google library -> Processing -> Sentiment analysis of the lyrics
+
+Input: Spotify Playlist ID
+Output: Sentiment analysis of every song on the playlist: metrics and (simple) visualization.
 
 
-# Data enrichment & cleaning
+1. We get our client id/client secret
+2. With that, we get our spotify tokens
 
-Selection of a world-wide location for a gaming company given some criteria. Data used was a dataset with companies and FourSquare API to get locations for Starbucks. 
+3. We make API calls
+4. We now have a dataframe
+5. We enrich the dataframe with the lyrics
 
-##  The problem ❗️ ## 
-<p align="left">
-  <img width="450" height="400" src="https://github.com/breogann/Project-2.Antidepressant-prescription/blob/master/Images/problem.png" alt="problem">
+6. We create sentiment analysis code
 
-## The solution 🟢 ##
 
-### Data 📊 ###
+https://developer.spotify.com/dashboard/applications
 
-The speech accent archive _(https://accent.gmu.edu)_ has a compilation of a huge variety of speakers with different backgrounds that read the same paragraph so it can be analyzed.
 
-In this case, only __spanish__ and __english__ speakers were used to train the model. Although speakers were not limited to a particular region, most of them belong to either the US and Spain.
+Resources
 
-### Data processing 🛠 ###
-- Obtention of coordinates through MongoDB
-- Formatting those coordinates
-- Use the formatted data to iterate over through the API
-- Place the coordinates in a map
+Spacy: https://realpython.com/sentiment-analysis-python/
 
-<table border="0">
-    <tr>
-        <td><b style="font-size:13px">Used technologies 🔌</b></td>
-        <td><b style="font-size:13px">Used libraries 📚</b></td>
-    </tr>
-    <tr>
-        <td>
-            <ul>
-                <font size="1.5">
-      <li>MongoDB</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      </font>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <font size="1.5">
-      <li>Pandas</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      </font>
-</table>
 
-##### To do #####
-- Add more venue filters: vegan places, etc.
-- Calculate minimun distance to rank possible places
+NLTK: https://www.digitalocean.com/community/tutorials/how-to-perform-sentiment-analysis-in-python-3-using-the-natural-language-toolkit-nltk
